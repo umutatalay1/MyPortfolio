@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+	<div class="wrapper">
+
+		@await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+		@await Component.InvokeAsync("_LayoutSidebarComponenetPartial")
+
+		<div class="main-panel">
+
+			
+			@RenderBody() <!-- Bu sayfaya bağlı olarak gelecek sayfalar sayfamızın tam olarak bu kısmında yer alıyor-->
+			<footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://linkedin.com/in/umutcan-atalay-ba782225b/">
+									linkedin
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Yardım
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://themewagon.com/license/#free-item">
+									Lisanslar
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						@DateTime.Now.Year, made with <i class="la la-heart heart text-danger"></i> by <a href="https://linkedin.com/in/umutcan-atalay-ba782225b/">Umutcan ATALAY</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		</div>
+	</div>
+	<!-- Modal -->
+	
+</body>
+@await Component.InvokeAsync("_LayoutScriptComponentPartial")
+</html>
